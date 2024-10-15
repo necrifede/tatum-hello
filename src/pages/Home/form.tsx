@@ -9,7 +9,7 @@ function Form() {
   const handleButtonClick = async () => {
     const tatum = await TatumSDK.init<Ethereum>({
       network: Network.ETHEREUM,
-      apiKey: { v4: import.meta.env.VITE_API_PATH },
+      apiKey: { v4: import.meta.env.VITE_API_KEY },
       verbose: true,
     });
     const balance = await tatum.address.getBalance({
