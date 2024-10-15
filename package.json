@@ -1,11 +1,14 @@
 {
 	"private": true,
 	"type": "module",
-	"homepage": "https://necrifede.github.io/tatum-hello",
+	"homepage": "https://necrifede.github.io/tatum-hello/",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"predeploy": "vite build",
+		"deploy": "gh-pages -d dist",
+		"postdeploy": "echo 'Deployment complete!'"
 	},
 	"dependencies": {
 		"@tatumio/tatum": "^4.2.0",
@@ -15,6 +18,7 @@
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.9.0",
+		"gh-pages": "^6.2.0",
 		"typescript": "^5.6.2",
 		"vite": "^5.3.3"
 	}
